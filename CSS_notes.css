@@ -444,11 +444,11 @@ SINTAXIS DE LAS ANIMACIONES
     
     - background-size: (x, y, auto, cover, contain)
     
-    - background-position: (left, top, bottom, right, center) ==> toma dos parametros separados por coma: [param.-por-X], [para.-por-Y].
+    - background-position: (left, top, bottom, right, center) ==> toma dos parámetros separados por coma: [param.-por-X], [para.-por-Y].
     
     - background-attachment: (scroll, fixed, inherit) ==> esto es lo que se usa para que las imágenes de fondo queden fijamente posicionadas al scrollear por la pagina (scroll vs fixed)
     
-    - background-clip: (border-box, padding-box, content-box) ==> corta la imagen dependiendo del parametro ingresado.
+    - background-clip: (border-box, padding-box, content-box) ==> corta la imagen dependiendo del parámetro ingresado.
     
     - background-origin: (border-box, padding-box, content-box) ==> origina nuevamente la imagen con la resolucion del contenedor, dependiendo del parametro ingresado.
     
