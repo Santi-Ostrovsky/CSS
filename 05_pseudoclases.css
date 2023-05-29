@@ -9,47 +9,119 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 LISTA DE PSEUDO-CLASES
 
 :active
+Representa un elemento (como un botón) que el usuario está activando. Comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta.
+
 :checked
+Representa cualquier radio (<input type="radio">), checkbox (<input type="checkbox">) u option (<option> en un elemento <select>) que está marcado o conmutado a un estado on.
+
 :default
-:dir()
+Representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.
+
 :disabled
+Representa a cualquier elemento deshabilitado.
+
 :empty
+Representa cualquier elemento que no tenga hijos.
+
 :enabled
+Representa cualquier elemento habilitado.
+
 :first
+Representa la primera página de un documento impreso. Utiliza la regla '@page at'.
+
 :first-child
+Representa el primer elemento entre un grupo de elementos hermanos.
+
 :first-of-type
+Representa el primer elemento de su tipo entre un grupo de elementos hermanos.
+
 :fullscreen
+Representa un elemento que se muestra cuando el navegador está en modo de pantalla completa.
+
 :focus
+Representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.
+
 :hover
+Coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa.
+
 :indeterminate
+Representa cualquier elemento de formulario cuyo estado sea indeterminado.
+
 :in-range
+Representa un elemento <input> cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.
+
 :invalid
+Representa cualquier elemento <input> u otro elemento <form> cuyos contenidos no se puedan validar.
+
 :lang()
+Utilizada para modificar elementos en función del idioma en el que se determina que están.
+
 :last-child
+Representa el último elemento entre un grupo de elementos hermanos.
+
 :last-of-type
+Representa el último elemento de su tipo entre un grupo de elementos hermanos.
+
 :left
+Utilizada con la regla @page at, representa todas las páginas de la izquierda de un documento impreso.
+
 :link
+Representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado <a>, <area>, o <link> que tiene un atributo href.
+
 :not()
+Representa elementos que no coinciden con una lista de selectores.
+
 :nth-child()
+Coincide con uno o más elementos en función de su posición entre un grupo de hermanos.
+
 :nth-last-child()
+Selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.
+
 :nth-last-of-type()
+Coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.
+
 :nth-of-type()
+Selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
+
 :only-child
+Representa un elemento sin hermanos. Esto es lo mismo que :first-child:last-child o :nth-child(1):nth-last-child(1), pero con una especificidad menor.
+
 :only-of-type
+Representa un elemento que no tiene hermanos del mismo tipo.
+
 :optional
+Representa cualquier elemento <input>, <select>, o <textarea> que no tenga el atributo required establecido en él.
+
 :out-of-range
+Representa un elemento <input> cuyo valor actual está fuera de los límites de rango especificados por los atributos min y max.
+
 :read-only
+Representa un elemento que ya no es editable por el usuario (como un input).
+
 :read-write
+Representa un elemento (como un input) que es editable por el usuario.
+
 :required
+Representa cualquier elemento <input>, <select>, o <textarea> que tenga el atributo required establecido en él.
+
 :right
+Utilizada con la regla-at @page, representa todas las páginas de la derecha de un documento impreso.
+
 :root
-:scope (en-US)
+Selecciona el elemento raíz de un árbol que representa el documento. En HTML, :root representa el elemento <html> y es idéntico al selector html, excepto que su especificidad es mayor.
+
 :target
+Representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la URL.
+
 :valid
+Representa cualquier elemento <input> u otro elemento <form> cuyo contenido se valide satisfactoriamente.
+
 :visited
+Representa enlaces que el usuario ya ha visitado.
 */
 
-/* -------------------------------------- */
+/* ============================================================ */
+/* ============================================================ */
 
 /* EJEMPLOS
 
@@ -58,6 +130,7 @@ LISTA DE PSEUDO-CLASES
   <input type='email' placeholder='Email' required>
   <input type='submit'>
 </form>
+
 */
 
 /* Dentro de la clase 'form-pseudoclases', que a todos los elementos requeridos, se les aplique el siguiente estilo:
@@ -94,8 +167,4 @@ LISTA DE PSEUDO-CLASES
 - color de fuente gris;    */
 .form-pseudoclases *:visited {
   color: grey;
-}
-
-/* .    */
-.form-pseudoclases {
 }
