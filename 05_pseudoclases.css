@@ -1,0 +1,101 @@
+/* 
+PSEUDO-CLASES
+
+Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado.
+Por ejemplo, ':hover' aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+
+LISTA DE PSEUDO-CLASES
+
+:active
+:checked
+:default
+:dir()
+:disabled
+:empty
+:enabled
+:first
+:first-child
+:first-of-type
+:fullscreen
+:focus
+:hover
+:indeterminate
+:in-range
+:invalid
+:lang()
+:last-child
+:last-of-type
+:left
+:link
+:not()
+:nth-child()
+:nth-last-child()
+:nth-last-of-type()
+:nth-of-type()
+:only-child
+:only-of-type
+:optional
+:out-of-range
+:read-only
+:read-write
+:required
+:right
+:root
+:scope (en-US)
+:target
+:valid
+:visited
+*/
+
+/* -------------------------------------- */
+
+/* EJEMPLOS
+
+<form class='form-pseudoclases'>
+  <input type='text' placeholder='Nombre' required>
+  <input type='email' placeholder='Email' required>
+  <input type='submit'>
+</form>
+*/
+
+/* Dentro de la clase 'form-pseudoclases', que a todos los elementos requeridos, se les aplique el siguiente estilo:
+- Bordes de color amarillo;    */
+.form-pseudoclases *:required {
+  border-color: yellow;
+}
+
+/* Dentro de la clase 'form-pseudoclases', que a todos los inputs cuyo contenido ingresado por el usuario sea válido, se les aplique el siguiente estilo:
+- Bordes de color verde;    */
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+
+/* Dentro de la clase 'form-pseudoclases', que a todos los inputs cuyo contenido ingresado por el usuario sea inválido, se les aplique el siguiente estilo:
+- Bordes de color rojo;    */
+.form-pseudoclases *:invalid {
+  border-color: red;
+}
+
+/* Dentro de la clase 'form-pseudoclases', que a todos elementos sobre los que se posiciona el usuario, se les aplique el siguiente estilo:
+- color de fondo celeste;    */
+.form-pseudoclases *:focus {
+  background-color: lightblue;
+}
+
+/* Dentro de la clase 'form-pseudoclases', que a todos los elementos sobre los que pase el usuario con el cursor, se les aplique el siguiente estilo:
+- color de fondo violeta;    */
+.form-pseudoclases *:hover {
+  background-color: purple;
+}
+
+/* Dentro de la clase 'form-pseudoclases', que a todos los vínculos ya visitados por el usuario, se les aplique el siguiente estilo:
+- color de fuente gris;    */
+.form-pseudoclases *:visited {
+  color: grey;
+}
+
+/* .    */
+.form-pseudoclases {
+}

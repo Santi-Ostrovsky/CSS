@@ -1,0 +1,32 @@
+/*
+[NO RECOMENDADO] Pueden importarse archivos CSS dentro de otros utilizando la siguiente sintaxis:
+
+@import url("[ruta del archivo]")
+
+Esto va a hacer que todas las configuraciones CSS del archivo importado se apliquen al cual realiza la importación.
+
+EJ:
+*/
+
+h1 {
+  color: red;
+  background-color: green;
+}
+
+@import url("./01_selectores.css");
+
+/*
+En el archivo 01_selectores.css, hay un selector h1 con el siguiente bloque de declaraciones:
+
+h1 {
+  color: #fff;
+  background-color: #000;
+}
+
+Por prioridad y operación de las hojas de estilo en cascada, el estilo que se va a aplicar a la clase h1 es el del archivo importado.
+
+POR QUE NO SE RECOMIENDA IMPORTAR CON '@IMPORT' (en CSS puro) ↓
+Cuando carga pagina, al encontrarse con un <link>, el navegador descarga la información de dicho link pero sigue con la ejecución de la aplicación mientras la descarga se realiza.
+Utilizando la sintaxis "@import", la aplicación detiene su ejecución hasta que el archivo referenciado en la url sea descargado completamente, ralentizando la aplicación.
+- COMPORTAMIENTO BLOQUEANTE -
+*/

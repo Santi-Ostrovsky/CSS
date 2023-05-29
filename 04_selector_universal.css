@@ -1,0 +1,35 @@
+/* SELECTOR UNIVERSAL  [*]
+
+'*' se aplica a todos los elementos html dentro del documento.
+
+Se utiliza para aplicar estilos de base comunes a todos los componentes del sitio.
+
+*/
+
+* {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+/*
+Puede utilizarse como contenedor de todos los elementos dentro de un rango determinado:
+
+<ul class='selector-universal'>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+  <li>Primavera</li>
+</ul>
+*/
+
+.selector-universal * {
+  font-family: serif;
+  font-size: 50px;
+}
+
+/*
+EXPLICACIÓN
+Dentro de la clase 'selector-universal', que a TODOS los elementos se apliquen los siguientes estilos:
+- Letra 'serif' (por especificidad y orden de la cascada, reemplaza a la asignación universal hecha previamente)
+- Letra con tamaño de 50 pixeles.
+*/

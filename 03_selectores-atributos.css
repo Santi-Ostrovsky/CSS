@@ -1,0 +1,113 @@
+/*
+SELECTORES DE ATRIBUTOS
+
+<nav id='nav' class='selectores-atributos'>
+  <ul>
+    <li><a href='https://sostro.com' target='_blank'>Inicio</a></li>
+    <li><a href='http://sostro.com/cursos' target='_blank'>Cursos</a></li>
+    <li><a href='https://sostro.com/blog' target='_blank'>Blog</a></li>
+    <li><a class='menu-item notas'href='http://sostro.com/notas' target='_blank'>Notas</a></li>
+    <li><a class='menu-item cv lista' href='https://sostro.com/cv' target='_blank'>Curriculum</a></li>
+    <li><a href='https://sostro.com/contacto' target='_blank'>Contacto</a></li>
+    <li><a href='#nav'>Principio</a></li>
+  </ul>
+</nav>
+*/
+
+/* ------------------------------------------ */
+/* ATRIBUTO */
+
+.selectores-atributos a[href] {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* EXPLICACIÓN 
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'href':
+- que la letra sea de color azul;
+- que el texto esté subrayado;
+*/
+
+/* ------------------------------------------ */
+/* ATRIBUTO Y VALOR */
+
+.selectores-atributos a[target="_blank"] {
+  color: orange;
+  text-decoration: dotted;
+}
+
+/* EXPLICACIÓN 
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'target' cuyo valor es '_blank':
+- que la letra sea de color naranja;
+- que el texto esté subrayado con linea punteada;
+*/
+
+/* ------------------------------------------ */
+/* COMODÍN [*] */
+
+.selectores-atributos a[href*="sostro"] {
+  color: purple;
+  text-decoration: wavy;
+}
+
+/* EXPLICACIÓN [*=]
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'href' cuyo valor CONTENGA el término 'sostro':
+- que la letra sea de color violeta;
+- que el texto esté subrayado con linea curvada;
+*/
+
+/* ------------------------------------------ */
+/* COMODÍN [^] */
+
+.selectores-atributos a[href^="http:"] {
+  color: white;
+  text-decoration: none;
+}
+
+/* EXPLICACIÓN [^=]
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'href' cuyo valor COMIENCE con el término 'http:' (Cursos y Notas - El resto de los links tienen protocolo seguro https:):
+- que la letra sea de color blanco;
+- que el texto no tenga ninguna decoración;
+*/
+
+/* ------------------------------------------ */
+/* COMODÍN [$] */
+
+.selectores-atributos a[href$=".com"] {
+  color: grey;
+  font-weight: bold;
+}
+
+/* EXPLICACIÓN [$=]
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'href' cuyo valor TERMINE con el término '.com' (Inicio):
+- que la letra sea de color gris;
+- que la letra esté en negrita;
+*/
+
+/* ------------------------------------------ */
+/* COMODÍN [~] */
+
+.selectores-atributos a[class~="cv"] {
+  color: hotpink;
+  font-size: 20px;
+}
+
+/* EXPLICACIÓN [~=]
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'class' cuyo valor CONTENGA la clase 'cv' en una lista de clases separadas por espacios (Curriculum):
+- que la letra sea de color rosa fuerte;
+- que la letra tenga un tamaño de 20 píxeles;
+*/
+
+/* ------------------------------------------ */
+/* COMODÍN [|] */
+
+.selectores-atributos a[class|="menu"] {
+  background-color: green;
+  font-size: 30px;
+}
+
+/* EXPLICACIÓN [|=]
+Dentro de los elementos con la clase 'selectores-atributos', en los elementos <a> con el atributo 'class' cuyo valor CONTENGA la clase 'cv' en una lista de clases separadas por espacios, y que después del texto en cuestión pueda contener un guion medio [-] (Notas y Curriculum):
+- que el fondo sea de color verde;
+- que la letra tenga un tamaño de 30 píxeles;
+*/

@@ -1,0 +1,105 @@
+/*
+SELECTORES AVANZADOS
+1) Selectores de hijos directos
+2) Selectores de hijos descendientes
+3) Selectores de hermanos (en general)
+4) Selectores de hermanos adyacentes
+*/
+
+/*
+1) -HIJOS DIRECTOS-
+Elementos directamente dentro de otros elementos, como las listas y sus items:
+
+<ul class="hijos-directos">
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+  <li>Primavera</li>
+</ul>
+
+→ Los items 'Verano', 'Otoño', 'Invierno' y 'Primavera' son hijos directos/de primer nivel de la lista desordenada <ul>.
+
+→ Para aplicar estilos a los items, se utiliza la siguiente sintaxis en el selector:
+
+[elemento-padre] > [elemento-hijo] {
+    declaraciones CSS
+}
+*/
+
+.hijos-directos > li {
+  background-color: lightblue;
+}
+
+/*
+2) -HIJOS DE DESCENDIENTES-
+Elementos dentro de los elementos hijos:
+
+<ul class="descendientes">
+  <li><b>Verano</b></li>
+  <li><b>Otoño</b></li>
+  <li><b>Invierno</b></li>
+  <li><b>Primavera</b></li>
+</ul>
+
+→ Los items de la lista desordenada ahora tienen un elemento <b>, que es hijo directo de cada item pero no de la lista desordenada <ul>, sino que es descendiente de la misma.
+
+→ Para aplicar estilos a los descendientes, se deja un espacio en blanco en el selector:
+
+[elemento-padre] [elemento-descendiente] {
+    declaraciones CSS
+}
+
+(*) Esto va a hacer que el estilo declarado dentro del selector se aplique a todos los elementos descendientes con ese nombre que se encuentren dentro del elemento padre, sin importar el orden en que se encuentren y sin límite de grado o profundidad.
+*/
+
+.descendientes b {
+  background-color: rgb(255, 100, 150);
+}
+
+/*
+3) -HERMANOS (EN GENERAL)-
+Elementos del mismo nivel, por debajo del que lleva la configuración de estilo.
+
+<ul>
+  <li><b>Verano</b></li>
+  <li class='hermanos-general'><b>Otoño</b></li>
+  <li><b>Invierno</b></li>
+  <li><b>Primavera</b></li>
+</ul>
+
+→ Para aplicar estilos a los items, se utiliza la siguiente sintaxis en el selector:
+
+[elemento] ~ [elementos-hermanos] {
+    declaraciones CSS
+}
+
+(*) Esto va a hacer que el estilo declarado dentro del selector se aplique a todos los elementos hermanos/mismo grado por debajo del utilizado como referencia.
+*/
+
+.hermanos-general ~ li {
+  font-style: italic;
+} /* Sólo "Invierno" y "Verano" van a estar en cursiva, ya que son elementos hermanos <li> por debajo de la cascada del utilizado como referencia */
+
+/*
+4) -HERMANOS ADYACENTES-
+
+
+<ul>
+  <li><b>Verano</b></li>
+  <li class='hermanos-adyacentes'><b>Otoño</b></li>
+  <li><b>Invierno</b></li>
+  <li><b>Primavera</b></li>
+</ul>
+
+→ Para aplicar estilos a los items, se utiliza la siguiente sintaxis en el selector:
+
+[elemento] + [hermanos-adyacentes] {
+    declaraciones CSS
+}
+
+(*) Esto va a hacer que el estilo declarado dentro del selector se aplique a un único elemento hermano/mismo grado por debajo del utilizado como referencia.
+*/
+
+.hermanos-adyacentes + li {
+  font-weight: bold;
+} /* Sólo "Invierno" va a estar en negrita, ya que es el único elemento hermano adyacente (por debajo) a "Otoño", el utilizado como referencia */

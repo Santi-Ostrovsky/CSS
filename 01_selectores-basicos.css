@@ -1,0 +1,47 @@
+/*
+La sintaxis en CSS consta de dos elementos básicos:
+1) Selector
+2) Bloque de declaraciones
+
+h1 {                            <--- Selector
+    color: #fff;             ┐
+    background-color: #000;  │  <--- Bloque de
+}                            ┘       declaraciones
+
+*/
+
+h1 {
+  color: #fff;
+  background-color: #000;
+}
+
+/*
+
+SELECTORES BÁSICOS
+1) Etiquetas - elementos HTML
+2) Identificadores - atributo #id
+3) Clases - atributo .class
+
+*/
+
+/* Etiquetas */
+html {
+  scroll-behavior: smooth;
+  font-style: none;
+}
+
+/* Identificadores */
+#titulo {
+  color: red;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* Clases */
+.frase {
+  text-align: justify;
+  font-style: italic;
+  color: black;
+}
+
+/* RECOMENDACIÓN ==> En archivos CSS grandes, es mejor ordenar los selectores alfabética y categóricamente (por tipo de selector) para poder encontrar más fácil y rápido el selector que se intenta modificar. */
