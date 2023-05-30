@@ -1,0 +1,105 @@
+/* PROPIEDAD 'DISPLAY'
+
+La propiedad 'display' puede alterar el comportamiento de visualización de un elemento, como cambiar un elemento de línea a bloque.
+
+-- POSIBLES VALORES --
+
+- display: none;
+El elemento es removido completamente, como si no formara parte del documento HTML.
+
+- display: inline;
+Convierte elementos de bloque en elementos de línea. Todos los estilos que se apliquen de alto y ancho (height & width) no tendrán efecto.
+
+- display: block;
+Convierte elementos de línea en elementos de bloque.
+
+- display: inline-block;
+Hace que un elemento tenga propiedades de línea y de bloque al mismo tiempo: se comporta como una etiqueta de texto ocupando solamente el espacio necesario, pero pueden ser aplicadas configuraciones de altura y anchura (height & width).
+
+
+- display: list-item;
+Hace que un elemento se comporte como un elemento de lista <li>. A diferencia de un elemento de lista original, es que este elemento no va a tener un índice numérico <ol> o viñeta <ul>.
+
+- display: table;
+El elemento se comportará como una tabla, su contenido y elementos descendientes se comportarán como celdas de la tabla.
+
+- display: table-cell;
+El elemento se comportará como la celda de una tabla <td>/<th>. Su contenido y elementos se comportarán como celdas de tabla.
+
+- display: table-row;
+El elemento se comportará como la fila de una tabla <tr>. Su contenido y elementos se comportarán como celdas de tabla.
+
+-----------------------------------
+
+PROPIEDADES DEL MÓDULO 'FLEX' (ver por separado)
+- display: flex;
+- display: inline-flex;
+
+PROPIEDADES DEL MÓDULO 'GRID' (ver por separado)
+- display: grid;
+- display: inline-grid;
+
+
+-----------------------------------
+
+PROPIEDAD 'VISIBILITY'
+
+Mientras que 'display' altera la visualización de los elementos, 'visibility' altera la visibilidad.
+
+Tiene 2 posibles valores:
+- visibility: visible; (por defecto)
+- visibility: hidden;
+
+A diferencia de 'display', en el cual puede utilizarse el valor 'none', haciendo desaparecer al elemento (pero cargándolo en el documento igualmente), 'visibility: hidden;' hace que el elemento sea invisible pero manteniendo el espacio de ese elemento reservado en el documento HTML.
+
+
+-----------------------------------
+
+PROPIEDAD 'OVERFLOW'
+
+'display' and 'visibility' modifican el comportamiento y la visibilidad de los contenedores de elementos HTML.
+
+A veces, el contenido de un contenedor puede exceder los límites del mismo. Para manejar el comportamiento de la porción de contenido que, por cuyo tamaño, quedó fuera de su contenedor, se usa la propiedad 'overflow'.
+
+'overflow' es una 'shorthand property', ya que si no se aclara la dirección del excedente, el valor de la propiedad se aplicará tanto en vertical como en horizontal.
+
+Para especificar dirección, en caso de necesitarlo, deben utilizarse las propiedades 'overflow-x' (horizontal) y 'overflow-y' (vertical).
+
+-- POSIBLES VALORES --
+
+- overflow: visible; - valor por defecto
+El contenido que escapa al contenedor sigue siendo visible por fuera del mismo.
+
+- overflow: hidden;
+El contenido que escapa al contenedor es escondido y no puede ser accedido por el usuario.
+
+- overflow: scroll;
+El contenido es accesible gracias a una barra de desplazamiento 'scrollbar', ya sea vertical u horizontal.
+
+- overflow: auto;
+El navegador decide si mostrar el contenido con una barra de desplazamiento o no.
+
+
+-----------------------------------
+
+A su vez, otras dos propiedades overflow permiten alterar el comportamiento del texto específicamente:
+
+- overflow-wrap --> Define si las palabras deben romperse al llegar al final del renglón.
+
+- text-overflow --> Define cómo se comporta el texto escondido cuando el mismo excede el tamaño del contenedor.
+
+-- POSIBLES VALORES --
+
+- overflow-wrap: normal; - valor por defecto
+Las palabras sin espacios NO se van a partir. Secuencias de caracteres ininterrumpidos van a mostrarse en la misma línea.
+
+- overflow-wrap: break-word;
+Las palabras sin espacios se van a partir al momento de llegar al final del renglón, mostrando el resto de la palabra partida al comienzo del siguiente renglón.
+
+- text-overflow: clip; - valor por defecto
+El texto que escapa de su contenedor deja de ser visible al usuario.
+
+- text-overflow: ellipsis;
+El texto que excede el tamaño del contenedor es reemplazado por puntos suspensivos [...].
+
+*/
