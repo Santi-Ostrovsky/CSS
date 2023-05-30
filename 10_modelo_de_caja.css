@@ -1,0 +1,44 @@
+/* MODELO DE CAJA
+
+Para CSS, cada elemento HTML representa una caja, y cada caja va a tener propiedades referentes a la fuente, los bordes, colores o imágenes de fondo, márgenes, etc.
+
+
+            ┌──────────────────── TOP ────────────────────┐
+            │ margin                                      │
+            │     ┌─────────────────────────────────┐     │
+            │     │ border                          │     │
+            │     │     ┌─────────────────────┐     │     │
+            │     │     │ padding             │     H     R
+            L     │     │     ┌─────────┐     │     E     I
+            E     │     │     │ fuente  │     │     I     G
+            F     │     │     └─────────┘     │     G     H
+            T     │     │                     │     H     T
+            │     │     └─────────────────────┘     T     │
+            │     │                                 │     │
+            │     └───────────── WIDTH ─────────────┘     │
+            │                                             │
+            └─────────────────── BOTTOM ──────────────────┘
+
+- FUENTE --> Contenido de la caja.
+
+- PADDING --> Distancia del contenido al borde de la caja.
+
+- BORDER --> Límite físico de la caja. Puede alterarse el color, la textura, la transparencia, el grosor, etc.
+
+- MARGIN --> Distancia del borde de la caja a sus elementos hermanos o a la caja contenedora (elemento padre).
+
+--------------------------------------------------------------
+
+Para personalizar los estilos de Padding, Border y Margin, puede hacerse llamando directamente a la propiedad misma, lo que modificará la propiedad de manera proporcional a los 4 lados (top, bottom, left y right).
+
+En caso de querer modificar los lados individualmente, puede hacerse de dos maneras:
+
+1) Todas las propiedades tienen una especificación de lado.
+   Ej: padding → padding-left, padding-right, padding-top, padding-bottom.
+
+2) Para modificar la propiedad en los 4 lados con valores distintos en una misma línea, pueden ponerse los valores separados por un espacio, comenzando por 'top', en el sentido de las agujas del reloj:
+   padding: 1px 2px 3px 4px; --> top: 1px, right: 2px, bottom: 3px, left: 4px.
+
+
+
+*/
