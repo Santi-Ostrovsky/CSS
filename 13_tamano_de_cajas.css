@@ -1,0 +1,13 @@
+/* TAMAÑO DE LAS CAJAS --> 'box-sizing'
+
+La propiedad 'box-sizing' define cómo son calculados el alto y el ancho de los contenedores, si incluyen 'padding' y 'margin' o no.
+
+-- POSIBLES VALORES --
+
+- box-sizing: content-box;
+El alto y el ancho del contenedor aplica únicamente al contenido del elemento (no incluye bordes). Si el ancho del contenedor es de 200px, el grosor del borde es de 2px y el padding es de 50px, al ancho total que ocupa el elemento es de 304px (200 del contenido más 2 de cada lado por el borde y 50 de cada lado por el padding).
+
+- box-sizing: border-box;
+El alto y ancho del contenedor aplica a todo el elemento, incluyendo los bordes. Si el ancho del contenedor es de 200px, el grosor del borde es de 2px y el padding es de 50px, el ancho total que ocupa el elemento es de 200px, siendo que el padding ocupa 50 de cada lado (100), el borde ocupa 2 de cada lado (4) y el contenido ocupa el espacio restante de 96px dentro del contenedor.
+
+*/
