@@ -1,0 +1,26 @@
+/* ELEMENTOS DE LÍNEA VS. ELEMENTOS DE BLOQUE
+
+Cajas de línea:
+- Ocupan únicamente el espacio necesario para mostrar su contenido.
+- No tienen dimensiones modificables.
+- Permiten otros elementos a sus lados.
+- Padding y margin solo empujan elementos adyacentes en sentido horizontal, nunca en vertical.
+
+Cajas de bloque:
+- Ocupan todo el ancho disponible del viewport.
+- Todas sus dimensiones son modificables.
+- No permiten la existencia de otros elementos a sus lados.
+*/
+
+/* LISTA PERIÓDICA DE LOS ELEMENTOS HTML */
+@import url("/HTML_Periodic_Table.png");
+
+/* Tomando como referencia la lista periódica de los elementos HTML, podemos decir que:
+
+- En línea
+Las etiquetas semánticas a nivel de texto (amarillo), las etiquetas de elementos multimedia (rosa) y las etiquetas de formulario -excepto la etiqueta <form>- (verde), son etiquetas de línea, denotan elementos cuyos contenedores van a seguir los comportamientos descriptos en la línea 3.
+
+- En bloque
+La etiqueta HTML -elemento raíz- (verde claro), etiquetas de metadata y scripting (azul), etiquetas de agrupación de contenido (naranja), las etiquetas que denotan secciones del documento (celeste) y las etiquetas de data tabular y elementos interactivos (naranja claro y blanco), por regla general, son etiquetas de bloque, siguiendo los comportamientos descriptos en la línea 9.
+
+*/
