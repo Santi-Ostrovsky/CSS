@@ -24,11 +24,13 @@ No siempre se va a respetar la regla anterior, ya que el orden de aparición de 
 
 Prioridad de declaraciones de estilo (de mayor a menor):
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Declaración "important!". Sin importar la regla de la cascada o la especificidad, si una configuración de estilo tiene la palabra clave "important!" luego de la declaración, se va a aplicar sin importar nada. Ej: div {color: blue !important;}.
+
 - Estilos en línea (declarados en la etiqueta HTML bajo el atributo 'style'.
 
 - Selectores por ID. Los elementos HTML pueden tener muchos atributos, pero el ID o identificador es único, por lo que si un estilo es asignado a un selector por ID y colisiona con otro asignado previa o posteriormente, el selector por ID va a tener prioridad y va a sobrescribir a todos los demás estilos.
 
-- Selectores de Clase. El segundo atributo mas importante para los estilos es el de la clase ('class'), ya que se utiliza comúnmente para definir estilos al aplicar muchas clases a un mismo elemento, separadas por espacios. Si un selector de clase tiene declaraciones de estilo para un elemento, y el mismo elemento recibe una configuración de estilo posterior (y no es a través de un selector por ID), el estilo NO va a ser sobrescrito y va a prevalecer el impuesto por el selector de clase.
+- Selectores de Clase (+atributos y pseudoclases). El segundo atributo mas importante para los estilos es el de la clase ('class'), ya que se utiliza comúnmente para definir estilos al aplicar muchas clases a un mismo elemento, separadas por espacios. Si un selector de clase tiene declaraciones de estilo para un elemento, y el mismo elemento recibe una configuración de estilo posterior (y no es a través de un selector por ID), el estilo NO va a ser sobrescrito y va a prevalecer el impuesto por el selector de clase.
 
 - Selector por elementos. Finalmente, los selectores por etiqueta HTML como <div>, <span> o <p>, vienen últimos en orden de especificidad. Si un selector de elemento define un estilo y luego otro selector de igual categoría define un estilo para el mismo elemento, el mismo va a ser sobrescrito por el efecto cascada.
 
@@ -37,5 +39,9 @@ Prioridad de declaraciones de estilo (de mayor a menor):
 3 - HERENCIA
 
 Cuando los elementos no tienen un estilo expresamente definido, van a tomar los estilos definidos para los componentes padres o superiores, mientras los mismos sobrescriban los estilos por defecto del navegador.
+
+Hay estilos que NO se heredan, como los bordes y el fondo, pero hay estilos que SI se heredan, como todo lo relacionado a la fuente, ya sea el tipo, el tamaño o la decoración de la misma.
+
+Para cancelar la herencia de estilos, se debe dar como valor a las declaraciones de estilo la palabra clave "initial". Esto hará que los elementos tengan las configuraciones de estilo estándar del navegador.
 
 */
