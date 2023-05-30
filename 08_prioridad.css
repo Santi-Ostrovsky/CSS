@@ -1,0 +1,41 @@
+/* ORDEN Y PRIORIDAD DE ESTILOS
+
+En un archivo CSS (y/o documento HTML), pueden haber lineas contradictorias, que asignen estilos distintos al mismo elemento.
+
+Cuando esto sucede, hay una serie de reglas que CSS sigue para determinar el estilo aplicable:
+
+1) Cascada
+2) Especificidad
+3) Herencia
+
+--------------------------
+
+1 - CASCADA
+
+Las primeras configuraciones de estilo que se aplican a los documentos HTML son las configuraciones por defecto de los navegadores, como señalar enlaces en azul, por ejemplo.
+
+Luego de aplicadas las configuraciones por defecto, se aplican los 'estilos del autor', los estilos CSS en orden de aparición. Esto significa que, dentro de un mismo archivo CSS, o en configuraciones de estilo provenientes de varias hojas de estilo, se aplicarán las configuraciones en el orden en que son leídas por el intérprete, por lo que, si dos o mas configuraciones de estilo se aplican al mismo elemento, la última es la que tendrá efecto al renderizar el documento.
+
+--------------------------
+
+2 - ESPECIFICIDAD
+
+No siempre se va a respetar la regla anterior, ya que el orden de aparición de los estilos puede ser sobrescrito por la Especificidad o prioridad de las declaraciones.
+
+Prioridad de declaraciones de estilo (de mayor a menor):
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Estilos en línea (declarados en la etiqueta HTML bajo el atributo 'style'.
+
+- Selectores por ID. Los elementos HTML pueden tener muchos atributos, pero el ID o identificador es único, por lo que si un estilo es asignado a un selector por ID y colisiona con otro asignado previa o posteriormente, el selector por ID va a tener prioridad y va a sobrescribir a todos los demás estilos.
+
+- Selectores de Clase. El segundo atributo mas importante para los estilos es el de la clase ('class'), ya que se utiliza comúnmente para definir estilos al aplicar muchas clases a un mismo elemento, separadas por espacios. Si un selector de clase tiene declaraciones de estilo para un elemento, y el mismo elemento recibe una configuración de estilo posterior (y no es a través de un selector por ID), el estilo NO va a ser sobrescrito y va a prevalecer el impuesto por el selector de clase.
+
+- Selector por elementos. Finalmente, los selectores por etiqueta HTML como <div>, <span> o <p>, vienen últimos en orden de especificidad. Si un selector de elemento define un estilo y luego otro selector de igual categoría define un estilo para el mismo elemento, el mismo va a ser sobrescrito por el efecto cascada.
+
+--------------------------
+
+3 - HERENCIA
+
+Cuando los elementos no tienen un estilo expresamente definido, van a tomar los estilos definidos para los componentes padres o superiores, mientras los mismos sobrescriban los estilos por defecto del navegador.
+
+*/
