@@ -1,5 +1,93 @@
 /* PSEUDO-ELEMENTOS
 
+Dan estilo a partes específicas en un elemento.
+Como buena práctica, a diferencia de las pseudo-clases ':', se usan dos doble-puntos '::'.
 
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
 
+LISTA DE PSEUDO-ELEMENTOS
+
+::after
+Crea un pseudo-elemento que es el último hijo del elemento seleccionado. Es comúnmente usado para añadir contenido cosmético a un elemento con la propiedad content.Es en linea (inline) de forma predeterminada.
+
+::before
+Crea un pseudo-elemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad content. Este elemento se muestra en línea con el texto de forma predeterminada.
+
+::first-letter
+Aplica estilos a la primera letra de la primera línea un elemento de bloque, sólo cuando no es precedido de otro contenido (como imágenes o tablas).
+
+::first-line
+Aplica estilos a la primera línea de un elemento de bloque. (La longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto).
+
+::selection
+Aplica reglas a una porción de un documento que ha sido destacado (por ejemplo: selección con el mouse o algún otro puntero en un dispositivo) del usuario.
+
+::placeholder
+Representa el texto provisional en un elemento <input> o un elemento <textarea>.
+
+::marker
+Selecciona la caja de marcadores de un elemento de la lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento configurado para display: list-item, como el elemento <li> y <summary>.
+
+*/
+
+/* ============================================================ */
+/* ============================================================ */
+
+/* EJEMPLOS
+
+<p class="pseudoelementos">
+    <span class='numero uno'>1</span>
+    <span class='numero dos'>2</span>
+    <span class='numero tres'>3</span>
+</p>
+
+*/
+
+.numero ::before {
+  content: "#";
+}
+
+.uno ::after {
+  content: "1️⃣";
+}
+
+.dos ::after {
+  content: "2️⃣";
+}
+
+.tres ::after {
+  content: "3️⃣";
+}
+
+/* OUTPUT:
+#1 1️⃣
+#2 2️⃣
+#3 3️⃣
+*/
+
+/* ============================================================ */
+/* ============================================================ */
+
+/* EJEMPLOS
+
+<p class="pseudoelementos">
+    <span>abc</span>
+    <span>def</span>
+    <span>ghi</span>
+</p>
+
+*/
+
+.pseudoelementos ::first-letter {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.pseudoelementos ::first-line {
+  color: coral;
+}
+
+/* OUTPUT:
+- En el <span> 'abc', letra 'A' va a estar en negrita y tamaño de 30px.
+- El primer <span> completo va a tener color de fuente coral.
 */
