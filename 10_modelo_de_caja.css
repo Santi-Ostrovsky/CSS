@@ -31,14 +31,26 @@ Para CSS, cada elemento HTML representa una caja, y cada caja va a tener propied
 
 Para personalizar los estilos de Padding, Border y Margin, puede hacerse llamando directamente a la propiedad misma, lo que modificará la propiedad de manera proporcional a los 4 lados (top, bottom, left y right).
 
-En caso de querer modificar los lados individualmente, puede hacerse de dos maneras:
+Ej: padding: 5px (esto se llama propiedad 'shorthand', porque se utiliza el nombre de la propiedad para modificar sus 4 lados de manera automática).
+
+En caso de querer modificar los lados individualmente, puede hacerse de 4 maneras distintas:
 
 1) Todas las propiedades tienen una especificación de lado.
    Ej: padding → padding-left, padding-right, padding-top, padding-bottom.
 
-2) Para modificar la propiedad en los 4 lados con valores distintos en una misma línea, pueden ponerse los valores separados por un espacio, comenzando por 'top', en el sentido de las agujas del reloj:
-   padding: 1px 2px 3px 4px; --> top: 1px, right: 2px, bottom: 3px, left: 4px.
+2) Para modificar conjuntamente los lados verticales por un lado y los lados horizontales por otro, puede usarse la 'shorthand property' con dos valores en lugar de uno. El primero aplicará a los lados verticales - top y bottom - y el segundo aplicará a los lados horizontales - left y right -.
+   Ej: padding: 2px 4px;
+   (top: 2px, bottom: 2px, left: 4px, right: 4px).
+
+3) Para modificar los valores verticales por separado y los valores horizontales conjuntamente, puede usarse la 'shorthand property' con tres valores. El primero para el lado superior -top-, el segundo para los lados horizontales -left y right-, y el tercero para el lado inferior -bottom-.
+   Ej: padding: 2px 4px 3px;
+   (top: 2px, left: 4px, right: 4px, bottom: 3px).
+
+4) Para modificar la propiedad en los 4 lados con valores distintos en una misma línea, puede usarse la 'shorthand property' y ponerse los valores separados por un espacio, comenzando por 'top', en el sentido de las agujas del reloj.
+   Ej: padding: 1px 2px 3px 4px;
+   (top: 1px, right: 2px, bottom: 3px, left: 4px).
 
 
+**** Cuando una medida es cero '0', no es necesario agregar una unidad de medida (px, em, etc), ya que cero es lo mismo en todas las unidades ***
 
 */
