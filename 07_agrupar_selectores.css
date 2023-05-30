@@ -1,0 +1,23 @@
+/* AGRUPACIÓN DE SELECTORES
+
+Puede hacerse el mismo bloque de declaraciones para mas de un selector. Para ello, no es necesario repetir dicho bloque para que dos o mas elementos compartan estilos, si no que se agrupan separados por una coma antes de la apertura del bloque:
+
+*/
+
+div,
+form,
+p,
+span,
+input {
+  color: black;
+  background-color: white;
+}
+
+/* 
+Ahora, todos los contenedores 'div', formularios, párrafos, etiquetas 'span' e inputs, van a compartir estas configuraciones de estilo:
+
+- Color de fuente: negro;
+- Color de fondo: blanco;
+
+==> ES BUENA PRÁCTICA SEPARAR LOS ELEMENTOS, UNO POR CADA LÍNEA.
+*/
