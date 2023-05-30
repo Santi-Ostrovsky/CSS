@@ -39,4 +39,17 @@ PROPIEDADES DEL MÓDULO 'GRID' (ver por separado)
 - display: grid;
 - display: inline-grid;
 
+
+-----------------------------------
+
+PROPIEDAD 'VISIBILITY'
+
+Mientras que 'display' altera la visualización de los elementos, 'visibility' altera la visibilidad.
+
+Tiene 2 posibles valores:
+- visibility: visible; (por defecto)
+- visibility: hidden;
+
+A diferencia de 'display', en el cual puede utilizarse el valor 'none', haciendo desaparecer al elemento (pero cargándolo en el documento igualmente), 'visibility: hidden;' hace que el elemento sea invisible pero manteniendo el espacio de ese elemento reservado en el documento HTML.
+
 */
