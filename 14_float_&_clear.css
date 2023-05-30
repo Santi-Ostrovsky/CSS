@@ -1,0 +1,39 @@
+/* PROPIEDAD 'FLOAT' (mayormente reemplazado por Flex y Grid)
+
+La propiedad 'float' permite "flotar" elementos hacia la izquierda o hacia la derecha, mientras que los elementos hermanos siguientes van a envolver al elemento principal.
+
+-- POSIBLES VALORES --
+
+- float: none; - valor por defecto
+El elemento va a permanecer en el flujo normal de la página.
+
+- float: left;
+Mueve el elemento hacia el lado IZQUIERDO del contenedor. Los elementos hermanos siguientes van a envolverlo, llenando el espacio restante del contenedor hacia la derecha.
+
+- float: right;
+Mueve el elemento hacia el lado DERECHO del contenedor. Los elementos hermanos siguientes van a envolverlo, llenando el espacio restante del contenedor hacia la izquierda.
+
+
+-------------------------------------------------
+
+PROPIEDAD 'CLEAR'
+
+La propiedad 'clear' mueve los elementos luego de todos los elementos flotantes precedentes.
+
+Sólo es relevante cuando es utilizada con elementos hermanos que tengan la propiedad 'float'.
+
+-- POSIBLES VALORES --
+
+- clear: none;
+El elemento va a quedar al lado de cualquier elemento hermano flotante.
+
+- clear: left;
+El elemento va a ser renderizado directamente después de cualquier elemento precedente que flote hacia la izquierda, pero va a permanecer junto a los elementos que floten hacia la derecha.
+
+- clear: right;
+El elemento va a ser renderizado directamente después de cualquier elemento precedente que flote hacia la derecha, pero va a permanecer junto a los elementos que floten hacia la izquierda.
+
+- clear: both;
+El elemento va a ser renderizado directamente después de elementos precedentes flotantes hacia cualquiera de los dos lados.
+
+*/
