@@ -24,7 +24,7 @@ No siempre se va a respetar la regla anterior, ya que el orden de aparición de 
 
 Prioridad de declaraciones de estilo (de mayor a menor):
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
-- Declaración "important!". Sin importar la regla de la cascada o la especificidad, si una configuración de estilo tiene la palabra clave "important!" luego de la declaración, se va a aplicar sin importar nada. Ej: div {color: blue !important;}.
+- Declaración "important!". Sin importar la regla de la cascada o la especificidad, si una configuración de estilo tiene la palabra clave "important!" luego de la declaración, se va a aplicar sin importar nada. Ej: div {color: blue !important;}. (Si dos o mas declaraciones de estilo que afecten al mismo elemento tienen la palabra clave "!important", se aplica la regla de cascada).
 
 - Estilos en línea (declarados en la etiqueta HTML bajo el atributo 'style'.
 
@@ -40,8 +40,10 @@ Prioridad de declaraciones de estilo (de mayor a menor):
 
 Cuando los elementos no tienen un estilo expresamente definido, van a tomar los estilos definidos para los componentes padres o superiores, mientras los mismos sobrescriban los estilos por defecto del navegador.
 
-Hay estilos que NO se heredan, como los bordes y el fondo, pero hay estilos que SI se heredan, como todo lo relacionado a la fuente, ya sea el tipo, el tamaño o la decoración de la misma.
+Hay estilos que NO se heredan por defecto, como los bordes y el fondo, pero hay estilos que SI se heredan por defecto, como todo lo relacionado a la fuente, ya sea el tipo, el tamaño o la decoración de la misma.
 
 Para cancelar la herencia de estilos, se debe dar como valor a las declaraciones de estilo la palabra clave "initial". Esto hará que los elementos tengan las configuraciones de estilo estándar del navegador.
+
+Para forzar la herencia de propiedades, contrario a utilizar la palabra clave "initial", se utiliza la palabra clave "inherit". Esto puede hacer que un elemento hijo herede propiedades de un elemento padre cuando normalmente no lo haría, como los estilos de borde.
 
 */
