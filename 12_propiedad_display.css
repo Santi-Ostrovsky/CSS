@@ -1,0 +1,42 @@
+/* PROPIEDAD 'DISPLAY'
+
+La propiedad 'display' puede alterar el comportamiento de visualización de un elemento, como cambiar un elemento de línea a bloque.
+
+POSIBLES VALORES
+
+- display: none;
+El elemento es removido completamente, como si no formara parte del documento HTML.
+
+- display: inline;
+Convierte elementos de bloque en elementos de línea. Todos los estilos que se apliquen de alto y ancho (height & width) no tendrán efecto.
+
+- display: block;
+Convierte elementos de línea en elementos de bloque.
+
+- display: inline-block;
+Hace que un elemento tenga propiedades de línea y de bloque al mismo tiempo: se comporta como una etiqueta de texto ocupando solamente el espacio necesario, pero pueden ser aplicadas configuraciones de altura y anchura (height & width).
+
+
+- display: list-item;
+Hace que un elemento se comporte como un elemento de lista <li>. A diferencia de un elemento de lista original, es que este elemento no va a tener un índice numérico <ol> o viñeta <ul>.
+
+- display: table;
+El elemento se comportará como una tabla, su contenido y elementos descendientes se comportarán como celdas de la tabla.
+
+- display: table-cell;
+El elemento se comportará como la celda de una tabla <td>/<th>. Su contenido y elementos se comportarán como celdas de tabla.
+
+- display: table-row;
+El elemento se comportará como la fila de una tabla <tr>. Su contenido y elementos se comportarán como celdas de tabla.
+
+-----------------------------------
+
+PROPIEDADES DEL MÓDULO 'FLEX' (ver por separado)
+- display: flex;
+- display: inline-flex;
+
+PROPIEDADES DEL MÓDULO 'GRID' (ver por separado)
+- display: grid;
+- display: inline-grid;
+
+*/
